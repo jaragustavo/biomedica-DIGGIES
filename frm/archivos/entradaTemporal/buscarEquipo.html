@@ -1,0 +1,86 @@
+<div id="panelBuscar" class="panel panel-primary">
+        <div class="panel-heading centrado">Buscar Equipos </div>
+        <div class="panel-body">
+            <form id="formBuscar">
+                <input type="hidden" id="bpagina" name="bpagina" value="1"/>
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>Descripción</span>
+                    </div>
+                     <div class="col-md-9">
+                         <input id="bdescripcion" name="bdescripcion" type="text"
+                                class="form-control input-sm" placeholder="Descripción"/>
+                     </div> 
+                    <div class="col-md-2">
+                        <button id="botonBuscar" type="button"
+                                class="btn btn-primary btn-sm">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+           </form>
+           <br>
+           <div id="resultado">
+               <table class="table table-bordered table-striped table-hover">
+                   <thead>
+                       <tr>
+                           <th>Código</th>
+                           <th>Descripción</th>
+                           <th>Marca</th>
+                           <th>Modelo</th>
+                       </tr>
+                   </thead>
+                   <tbody id="contenidoBusqueda">
+                   </tbody>
+              </table>
+             
+           </div>
+           <div class="panel-footer centrado">
+               <button id="botonSalirBuscar" type="button"
+                       class="btn btn-primary btn-sm">
+                   Salir
+               </button>
+           </div>
+</div>
+<script>
+    buscarEquipo();
+    $("#bdescripcion").focus();
+    
+    $("input").keyup(function() {
+       // alert("entre");
+        buscarEquipo();
+        
+    });
+    
+   // siguienteCampo("#bnombre_usuario","#botonBuscar",false);
+    $("#botonBuscar").on("click",function(){
+        
+        $("#contenidoBusqueda").html("");
+        $("#bpagina").val("1");
+        buscarNombreUsuario();
+        $("#bdescripcion").focus();
+    });
+    $("#anterior").on("click",function(){
+        $("#contenidoBusqueda").html("");
+        var pag=parseInt($("#bpagina").val());
+        if (pag>1){
+            $("#bpagina").val(pag-1);
+        }
+        buscarNombreUsuario();
+
+    });
+    $("#siguiente").on("click",function(){
+        $("#contenidoBusqueda").html("");
+        var pag=parseInt($("#bpagina").val());
+        $("#bpagina").val(pag+1);
+        buscarNombreUsuario();
+
+    });
+    $("#botonSalirBuscar").on("click",function(){
+        $("#buscar").fadeOut("slow");
+        $("#panelPrograma").fadeIn("slow");
+     });
+     
+     
+</script>                 
+                   

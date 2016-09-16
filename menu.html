@@ -1,0 +1,126 @@
+
+
+<html>
+    <head>
+        <title>Menu Principal</title>
+        <meta  charset="UTF-8">
+        <meta name="viewport" content="width=divice-width,initial-scale=1.0">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <style type='text/css'>
+            #contenido {
+                display:none;
+            }  
+        </style>
+    </head>
+    <body>
+        <div id ='contenido'>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class ="navbar-header">
+                        <button type="button" class="navbar-toggle collapse"
+                                data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <!--  <a class="navbar-collapse" href="#">DGGIES</a> -->
+                    
+                     <a class="navbar-brand" href="#" id="snombre_empresa"></a> 
+                   
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle"
+                                       data-toggle="dropdown" role="button">
+                                        Archivos<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="frm/archivos/usuarios">Usuarios</a></li>
+                                           <!-- <li><a href="frm/archivos/disenhos">Diseños</a></li>
+                                            <li><a href="frm/archivos/formularios">Eventos</a></li> -->
+                                            <li><a href="frm/archivos/proveedores">Proveedores</a></li>
+                                            <li><a href="frm/archivos/marca">Marcas</a></li>
+                                            <li><a href="frm/archivos/modelo">Modelos</a></li>
+                                        </ul>    
+                            </li>
+                        </ul>
+                         <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle"
+                                       data-toggle="dropdown" role="button">
+                                        Entrada<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="frm/archivos/entrada">Temporal</a></li>
+                                            <li><a href="frm/archivos/entrada">Permanente</a></li>
+
+                                        </ul>    
+                            </li>
+                        </ul>
+                          <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle"
+                                       data-toggle="dropdown" role="button">
+                                        Salidas<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="frm/archivos/entrada">Temporal</a></li>
+                                            <li><a href="frm/archivos/entrada">Permanente</a></li>
+
+                                        </ul>    
+                            </li>
+                        </ul>
+                           <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle"
+                                       data-toggle="dropdown" role="button">
+                                        Reportes<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="frm/archivos/entrada">Distribuciones</a></li>
+                                            <li><a href="frm/archivos/entrada">Lista de Equipos por Establecimiento </a></li>
+
+                                        </ul>    
+                            </li>
+                        </ul>
+                      
+                       <ul class="nav navbar-nav navbar-right"> 
+
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" 
+                                       data-toggle="dropdown" role="button">
+                                        Sistema<span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="index.html">Salir</a></li>
+                                         </ul>
+                            </li>
+                        </ul>
+                         <ul class="nav navbar-nav navbar-right"> 
+
+                            <li class="dropdown">
+                                    <a href="#" 
+                                        id="susuario_usuario">
+                                        <span class="caret"></span></a>
+                                       
+                            </li>
+                        </ul>
+
+                    </div>
+                 </div>
+            </nav>
+            <img src="img/fondo.png" alt="" align="rigth" style="max-width:100%;max-height:auto;"/>
+           
+            <div id="mensajes" class="well well-sm">Mensajes del sistema</div>
+             
+       </div>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
+        <script>
+            verificarSesion(false);
+        </script>
+       
+    </body>
+</html>
